@@ -20,7 +20,7 @@ const restaurants: Food[] = [
     infos: ['Destaque da semana', 'Japonesa'],
     imageFood: hioki,
     imageStar: star,
-    note: '4,9',
+    note: '4.9',
     button: 'saiba mais',
     pages: 'Hioki'
   },
@@ -32,7 +32,7 @@ const restaurants: Food[] = [
     infos: ['Italiana'],
     imageFood: dolce,
     imageStar: star,
-    note: '4,6',
+    note: '4.6',
     button: 'saiba mais',
     pages: 'Trattoria'
   },
@@ -44,7 +44,7 @@ const restaurants: Food[] = [
     infos: ['Churrasco'],
     imageFood: churrasco,
     imageStar: star,
-    note: '4,8',
+    note: '4.8',
     button: 'saiba mais',
     pages: 'Richards'
   },
@@ -56,31 +56,31 @@ const restaurants: Food[] = [
     infos: ['Árabe'],
     imageFood: arabe,
     imageStar: star,
-    note: '4,3',
+    note: '4.3',
     button: 'saiba mais',
     pages: 'Arabic'
   },
   {
     id: 5,
     description:
-      'A culinária do restaurante El Mexican é uma autêntica celebração dos sabores mexicanos. O menu apresenta clássicos como tacos crocantes, enchiladas suculentas e burritos recheados. As pimentas, um ingrediente chave, são usadas com maestria, variando de suaves a extremamente picantes, para agradar a todos os paladares. ',
+      'A culinária do restaurante El Mexican é uma autêntica celebração dos sabores mexicanos. O menu apresenta clássicos como tacos crocantes, enchiladas suculentas e burritos recheados. As pimentas, um ingrediente chave, são usadas com maestria.',
     title: 'El Mexican',
     infos: ['Mexicano'],
     imageFood: mexicana,
     imageStar: star,
-    note: '4,6',
+    note: '4.6',
     button: 'saiba mais',
     pages: 'ElMexican'
   },
   {
     id: 6,
     description:
-      'A culinária do restaurante Food China é uma verdadeira jornada pelos sabores autênticos da China. Seus pratos são caracterizados por uma harmoniosa mistura de especiarias. O restaurante é famoso por seu Pato de Pequim crocante, Dim Sums variados, e Sichuan Kung Pao Chicken, rico em sabores intensos e picantes.',
+      'A culinária do restaurante Food China é uma verdadeira jornada pelos sabores autênticos da China. Seus pratos são caracterizados por uma harmoniosa mistura de especiarias. O restaurante é famoso por seu Pato de Pequim crocante e Dim Sums variados.',
     title: 'Food China',
     infos: ['Chinesa'],
     imageFood: chinesa,
     imageStar: star,
-    note: '4,8',
+    note: '4.8',
     button: 'saiba mais',
     pages: 'china'
   }

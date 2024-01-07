@@ -27,7 +27,7 @@ const menuFood: Menus[] = [
   {
     id: 2,
     description:
-      'A picanha geralmente é preparada assada na churrasqueira, onde é cortada em tiras grossas ou em pedaços maiores, mantendo a gordura para adicionar sabor e suculência durante o cozimento.',
+      'A picanha geralmente é preparada assada na churrasqueira, onde é cortada em tiras grossas ou em pedaços maiores, mantendo a gordura para adicionar sabor.',
     title: 'Picanha',
     image: picanha,
     button: 'Adicionar ao carrinho'
@@ -35,7 +35,7 @@ const menuFood: Menus[] = [
   {
     id: 3,
     description:
-      'Um frango é tipicamente um prato feito com pedaços de frango que foram empanados ou revestidos em uma mistura de farinha e temperos, e depois fritos até atingirem uma cor dourada e crocante.',
+      'Um frango é tipicamente um prato feito com pedaços de frango que foram empanados ou revestidos em uma mistura de farinha e temperos.',
     title: 'Frango',
     image: frango,
     button: 'Adicionar ao carrinho'
@@ -43,7 +43,7 @@ const menuFood: Menus[] = [
   {
     id: 4,
     description:
-      'O Feijão Tropeiro é um prato tradicional da culinária brasileira, originário do estado de Minas Gerais. É feito com feijão cozido, misturado com pedaços de carne de porco, farinha de mandioca e ovos mexidos.',
+      'O Feijão Tropeiro é um prato tradicional da culinária brasileira, originário do estado de Minas Gerais. É feito com feijão cozido e misturado com pedaços de carne de porco.',
     title: 'Feijão Tropeiro',
     image: feijao,
     button: 'Adicionar ao carrinho'
@@ -51,7 +51,7 @@ const menuFood: Menus[] = [
   {
     id: 5,
     description:
-      'Um pudim é uma sobremesa doce, geralmente de consistência cremosa e suave. É frequente feito com leite, açúcar, ovos e saborizantes como baunilha ou caramelo. O pudim pode ser cozido ou refrigerado até ficar firme.',
+      'Um pudim é uma sobremesa doce, geralmente de consistência cremosa e suave. É frequente feito com leite, açúcar, ovos e saborizantes como baunilha ou caramelo.',
     title: 'Pudim',
     image: pudim,
     button: 'Adicionar ao carrinho'
@@ -59,7 +59,7 @@ const menuFood: Menus[] = [
   {
     id: 6,
     description:
-      'A caipirinha é uma bebida brasileira famosa, feita principalmente de cachaça (um destilado de cana-de-açúcar), limão, açúcar e gelo. É conhecida mundialmente por seu sabor refrescante e forte.',
+      'A caipirinha é uma bebida brasileira famosa, feita principalmente de cachaça (um destilado de cana-de-açúcar), limão, açúcar e gelo.',
     title: 'Caipirinha',
     image: caipirinha,
     button: 'Adicionar ao carrinho'
@@ -67,7 +67,7 @@ const menuFood: Menus[] = [
   {
     id: 7,
     description:
-      'Uma cerveja pode ser descrita como uma bebida alcoólica fermentada, geralmente de cor dourada a âmbar, com sabores que variam de suave a amargo. A cerveja é frequentemente servida gelada, com uma espuma cremosa.',
+      'Uma cerveja pode ser descrita como uma bebida alcoólica fermentada, geralmente de cor dourada a âmbar, com sabores que variam de suave a amargo.',
     title: 'Cerveja',
     image: cerveja,
     button: 'Adicionar ao carrinho'

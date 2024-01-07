@@ -27,7 +27,7 @@ const menuFood: Menus[] = [
   {
     id: 2,
     description:
-      'O sushi é um prato tradicional da culinária japonesa. Ele é composto principalmente de arroz temperado com vinagre de arroz, açúcar e sal, combinado com diferentes tipos de ingredientes como peixes crus, frutos do mar e vegetais.',
+      'O sushi é um prato tradicional da culinária japonesa. Ele é composto principalmente de arroz temperado com vinagre de arroz, açúcar e sal.',
     title: 'Sushi',
     image: hioki,
     button: 'Adicionar ao carrinho'
@@ -35,7 +35,7 @@ const menuFood: Menus[] = [
   {
     id: 3,
     description:
-      'O Ramen é um prato tradicional japonês consistindo de um caldo saboroso. O prato é enriquecido com diversos ingredientes como porções de carne (geralmente porco), ovos cozidos, algas nori, cebolinha e às vezes milho ou brotos de bambu.',
+      'O Ramen é um prato tradicional japonês consistindo de um caldo saboroso. O prato é enriquecido com diversos ingredientes como porções de carne.',
     title: 'Ramen',
     image: ramen,
     button: 'Adicionar ao carrinho'
@@ -43,7 +43,7 @@ const menuFood: Menus[] = [
   {
     id: 4,
     description:
-      'O mochi pode ser saboreado de várias maneiras: recheado com doce de feijão azuki, coberto com kinako (farinha de soja torrada), mergulhado em molho de soja doce, ou simplesmente comido puro  É comumente consumido durante o Ano Novo japonês.',
+      'O mochi pode ser saboreado de várias maneiras: recheado com doce de feijão azuki, coberto com kinako, mergulhado em molho de soja doce.',
     title: 'Mochi',
     image: mochi,
     button: 'Adicionar ao carrinho'
@@ -51,7 +51,7 @@ const menuFood: Menus[] = [
   {
     id: 5,
     description:
-      'O Gyosa é um tipo de pastel asiático, originário da China e popular no Japão. É um pequeno bolinho recheado, geralmente com uma mistura de carne de porco moída e vegetais como repolho, cebolinha e alho',
+      'O Gyosa é um tipo de pastel asiático, originário da China e popular no Japão. É um pequeno bolinho recheado, geralmente com uma mistura de carne de porco moída e vegetais.',
     title: 'Gyosa',
     image: gyosa,
     button: 'Adicionar ao carrinho'
@@ -59,7 +59,7 @@ const menuFood: Menus[] = [
   {
     id: 6,
     description:
-      'O temaki é um tipo de sushi em forma de cone, feito com uma folha de alga nori na parte externa, recheado com arroz de sushi e uma variedade de ingredientes como peixes, frutos do mar, vegetais e condimentos.',
+      'O temaki é um tipo de sushi em forma de cone, feito com uma folha de alga nori na parte externa, recheado com arroz de sushi e uma variedade de ingredientes como peixes.',
     title: 'Temaki',
     image: temaki,
     button: 'Adicionar ao carrinho'
@@ -67,7 +67,7 @@ const menuFood: Menus[] = [
   {
     id: 7,
     description:
-      'O yakisoba é um prato de origem japonesa que consiste em macarrão frito. É frequentemente temperado com molho de soja e especiarias, apresentando uma cor marrom e um sabor salgado e um pouco adocicado.',
+      'O yakisoba é um prato de origem japonesa que consiste em macarrão frito. É frequentemente temperado com molho de soja e especiarias..',
     title: 'Yakisoba',
     image: yakisoba,
     button: 'Adicionar ao carrinho'

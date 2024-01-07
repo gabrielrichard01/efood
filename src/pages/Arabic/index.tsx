@@ -27,7 +27,7 @@ const menuFood: Menus[] = [
   {
     id: 2,
     description:
-      'Consiste em camadas de massa folhada fina, recheadas com uma mistura de nozes trituradas, frequentemente pistaches, nozes ou amêndoas. Essas camadas são assadas até ficarem douradas e crocantes.',
+      'Consiste em camadas de massa folhada fina, recheadas com uma mistura de nozes trituradas, frequentemente pistaches, nozes ou amêndoas.',
     title: 'Baklava',
     image: baklava,
     button: 'Adicionar ao carrinho'
@@ -35,7 +35,7 @@ const menuFood: Menus[] = [
   {
     id: 3,
     description:
-      'O halva é um doce encontrado no o Oriente Médio, Ásia Central e o Mediterrâneo. Ele tem uma textura densa e granulada, e é feito a partir de ingredientes como farinha de sementes de gergelim (tahine) e mel.',
+      'O halva é um doce encontrado no o Oriente Médio, Ásia Central e o Mediterrâneo. Ele tem uma textura densa e granulada, e é feito a partir de ingredientes como farinha de sementes.',
     title: 'halva',
     image: halva,
     button: 'Adicionar ao carrinho'
@@ -43,7 +43,7 @@ const menuFood: Menus[] = [
   {
     id: 4,
     description:
-      'O falafel é um prato popular do Oriente Médio, feito principalmente de grão-de-bico ou fava moídos. Os grãos são embebidos em água, moídos e temperados com ingredientes como alho, cebola, coentro, cominho, sal e pimenta.',
+      'O falafel é um prato popular do Oriente Médio, feito principalmente de grão-de-bico ou fava moídos. Os grãos são embebidos em água.',
     title: 'Falafel',
     image: falafel,
     button: 'Adicionar ao carrinho'
@@ -51,7 +51,7 @@ const menuFood: Menus[] = [
   {
     id: 5,
     description:
-      'O Mansaf é um prato tradicional jordaniano, frequentemente considerado o prato nacional da Jordânia. Ele é feito com carne de cordeiro cozida em um molho de iogurte fermentado chamado Jameed.',
+      'O Mansaf é um prato tradicional jordaniano, frequentemente considerado o prato nacional da Jordânia. Ele é feito com carne de cordeiro cozida em um molho de iogurte fermentado.',
     title: 'Mansaf',
     image: mansaf,
     button: 'Adicionar ao carrinho'
@@ -59,7 +59,7 @@ const menuFood: Menus[] = [
   {
     id: 6,
     description:
-      'O kebab é um prato popular originário do Oriente Médio, consistindo principalmente de carne cortada em pedaços ou moída, que é grelhada ou assada. Tradicionalmente, a carne é marinada em uma mistura de especiarias. ',
+      'O kebab é um prato popular originário do Oriente Médio, consistindo principalmente de carne cortada em pedaços ou moída, que é grelhada ou assada.',
     title: 'Kebab',
     image: kebab,
     button: 'Adicionar ao carrinho'
@@ -67,7 +67,7 @@ const menuFood: Menus[] = [
   {
     id: 7,
     description:
-      'Ayran é uma bebida tradicional em muitos países do Oriente Médio e do Mediterrâneo. É feito a partir de iogurte misturado com água e um pouco de sal, resultando em uma bebida refrescante e levemente salgada.',
+      'Ayran é uma bebida tradicional em muitos países do Oriente Médio e do Mediterrâneo. É feito a partir de iogurte misturado com água e um pouco de sal, resultando em uma bebida.',
     title: 'Ayran',
     image: ayran,
     button: 'Adicionar ao carrinho'

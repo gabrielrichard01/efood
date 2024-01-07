@@ -6,7 +6,7 @@ import { TagContainer } from '../Tag/styles'
 export const Card = styled.div`
   border: 1px solid ${cores.rosa};
   position: relative;
-  margin-bottom: 48px;
+  width: 472px;
 
   ${TagContainer} {
     margin-right: 12px;
@@ -14,19 +14,21 @@ export const Card = styled.div`
 `
 
 export const Image = styled.img`
-  width: 472px;
+  width: 100%;
   height: 217px;
 `
 
 export const ButtonPink = styled(Link)`
   background-color: ${cores.rosa};
-  color: ${cores.branco};
+  color: ${cores.bege};
   text-decoration: none;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
   padding: 4px 6px;
   display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 12px;
 `
 
 export const Content = styled.div`
@@ -64,10 +66,13 @@ export const Descricao = styled.p`
   padding-bottom: 16px;
   font-size: 14px;
   line-height: 22px;
+  width: 100%;
+  height: 88px;
+  overflow: hidden;
 `
 
 export const Infos = styled.div`
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 0;
 `

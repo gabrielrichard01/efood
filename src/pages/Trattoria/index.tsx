@@ -27,7 +27,7 @@ const menuFood: Menus[] = [
   {
     id: 2,
     description:
-      'Uma pizza é um prato italiano popular consistindo de uma base fina de massa redonda, coberta com molho de tomate e uma variedade de coberturas, como queijo, carnes, vegetais e ervas, assada em forno até que a massa esteja crocante e o queijo derretido.',
+      'Uma pizza é um prato italiano popular consistindo de uma base fina de massa redonda, coberta com molho de tomate e uma variedade de coberturas, como queijo, carnes e vegetais',
     title: 'Pizza',
     image: pizza,
     button: 'Adicionar ao carrinho'
@@ -35,7 +35,7 @@ const menuFood: Menus[] = [
   {
     id: 3,
     description:
-      'Lasanha é um prato, composto por camadas alternadas de folhas de massa larga e plana, molho de tomate, carne moída e queijos, geralmente ricota, mozzarella e parmesão. É assada no forno até que os queijos derretam e formem uma cobertura dourada e borbulhante.',
+      'Lasanha é um prato, composto por camadas alternadas de folhas de massa larga e plana, molho de tomate, carne moída e queijos, geralmente ricota, mozzarella e parmesão.',
     title: 'Lasanha',
     image: lasanha,
     button: 'Adicionar ao carrinho'
@@ -43,7 +43,7 @@ const menuFood: Menus[] = [
   {
     id: 4,
     description:
-      'Spaghetti é um tipo de massa longa, fina e cilíndrica. Normalmente é feita de semolina ou farinha e água. É frequentemente servida com molho de tomate, que pode incluir vários ingredientes como carne e ervas, além de ser comumente acompanhada de queijo ralado.',
+      'Spaghetti é um tipo de massa longa, fina e cilíndrica. Normalmente é feita de semolina ou farinha e água. É frequentemente servida com molho de tomate.',
     title: 'Spaghetti',
     image: spaghetti,
     button: 'Adicionar ao carrinho'
@@ -51,7 +51,7 @@ const menuFood: Menus[] = [
   {
     id: 5,
     description:
-      'o gelato tem um teor de gordura mais baixo do que o sorvete tradicional, pois é feito com mais leite e menos creme. Além disso, ele é batido a uma velocidade mais lenta, resultando em menos ar e uma textura mais densa.',
+      'o gelato tem um teor de gordura mais baixo do que o sorvete tradicional, pois é feito com mais leite e menos creme.',
     title: 'Gelato',
     image: gelato,
     button: 'Adicionar ao carrinho'
@@ -59,7 +59,7 @@ const menuFood: Menus[] = [
   {
     id: 6,
     description:
-      'O Tiramisu é uma sobremesa italiana, conhecida pela sua rica camada de sabor e textura. Ele é feito com camadas alternadas de biscoitos ladyfinger embebidos em café e cremosa mistura de queijo mascarpone, ovos e açúcar.',
+      'O Tiramisu é uma sobremesa italiana, conhecida pela sua rica camada de sabor e textura. Ele é feito com camadas alternadas de biscoitos ladyfinger embebidos em café e cremosa.',
     title: 'Tiramisu',
     image: tiramisu,
     button: 'Adicionar ao carrinho'
@@ -67,7 +67,7 @@ const menuFood: Menus[] = [
   {
     id: 7,
     description:
-      'O vinho é uma bebida alcoólica feita principalmente pela fermentação do suco de uvas. Existem muitos tipos de vinho, que variam de acordo com a uva usada, a região onde é produzido, e os métodos de fermentação.',
+      'O vinho é uma bebida alcoólica feita principalmente pela fermentação do suco de uvas. Existem muitos tipos de vinho, que variam de acordo com a uva usada.',
     title: 'Vinho',
     image: vinho,
     button: 'Adicionar ao carrinho'
