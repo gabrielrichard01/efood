@@ -1,6 +1,6 @@
+import Button from '../Button'
 import Tag from '../Tag'
 import {
-  ButtonPink,
   Card,
   Content,
   Descricao,
@@ -47,7 +47,13 @@ const Product = ({
         </NoteImage>
       </Titulo>
       <Descricao>{description}</Descricao>
-      <ButtonPink to={pages}>{button}</ButtonPink>
+      <Button
+        type="link"
+        to={`${pages}`}
+        title="Clique aqui para visitar os restaurantes"
+      >
+        {button}
+      </Button>
     </Content>
   </Card>
 )

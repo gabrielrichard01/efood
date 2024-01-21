@@ -27,16 +27,3 @@ export const Descricao = styled.p`
   height: 88px;
   overflow: hidden;
 `
-
-export const ButtonWhite = styled.a`
-  background-color: ${cores.bege};
-  color: ${cores.rosa};
-  padding: 4px 0;
-  margin-top: 7px;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  width: 100%;
-  display: block;
-`

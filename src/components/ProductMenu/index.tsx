@@ -1,4 +1,5 @@
-import { ButtonWhite, CardMenu, Descricao, ImageCard, Titulo } from './styles'
+import Button from '../Button'
+import { CardMenu, Descricao, ImageCard, Titulo } from './styles'
 
 type Props = {
   title: string
@@ -13,7 +14,13 @@ const ProductMenu = ({ title, description, image, button }: Props) => (
       <ImageCard src={image} alt={title} />
       <Titulo>{title}</Titulo>
       <Descricao>{description}</Descricao>
-      <ButtonWhite href="#">{button}</ButtonWhite>
+      <Button
+        type="button"
+        title="Clique aqui para ter mais detalhes"
+        variant="primary"
+      >
+        {button}
+      </Button>
     </CardMenu>
   </div>
 )
