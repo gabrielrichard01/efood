@@ -1,9 +1,11 @@
-import logo from '../../assets/images/header/logo.png'
-import instagram from '../../assets/images/footer/instagram.png'
-import facebook from '../../assets/images/footer/facebook.png'
-import twitter from '../../assets/images/footer/twitter.png'
-import { Container, Descricao, FooterLogo, RedesSociais } from './styles'
 import { Link } from 'react-router-dom'
+
+import { Container, Descricao, FooterLogo, RedesSociais } from './styles'
+
+import logo from '../../assets/images/logo.png'
+import instagram from '../../assets/images/instagram.png'
+import facebook from '../../assets/images/facebook.png'
+import twitter from '../../assets/images/twitter.png'
 
 const Footer = () => (
   <Container>

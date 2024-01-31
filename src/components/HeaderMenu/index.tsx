@@ -1,7 +1,9 @@
-import logo from '../../assets/images/header/logo.png'
-import banner from '../../assets/images/header/fundo.png'
-import { HeaderPerfil, Links, Menu } from './styles'
 import { Link } from 'react-router-dom'
+
+import { HeaderPerfil, Links, Menu } from './styles'
+
+import logo from '../../assets/images/logo.png'
+import banner from '../../assets/images/fundo.png'
 
 const HeaderMenu = () => (
   <HeaderPerfil style={{ backgroundImage: `url(${banner})` }}>

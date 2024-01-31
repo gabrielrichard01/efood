@@ -1,7 +1,7 @@
 import { HeaderBar, HeaderText, Logo } from './styles'
 
-import logo from '../../assets/images/header/logo.png'
-import fundo from '../../assets/images/header/fundo.png'
+import logo from '../../assets/images/logo.png'
+import fundo from '../../assets/images/fundo.png'
 
 const Header = () => (
   <HeaderBar style={{ backgroundImage: `url(${fundo})` }}>

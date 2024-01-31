@@ -1,13 +1,20 @@
-import bannerImg from '../../assets/images/trattoria/fundo-tratoria.jpg'
 import { Banner, Category, Restaurant } from './styles'
 
-const Hero = () => (
-  <Banner style={{ backgroundImage: `url(${bannerImg})` }}>
-    <div className="container">
-      <Category>Italiana</Category>
-      <Restaurant>La Vitta Trattoria</Restaurant>
-    </div>
-  </Banner>
-)
+import { Food } from '../../pages/Home'
+
+type Props = {
+  food: Food
+}
+
+const Hero = ({ food }: Props) => {
+  return (
+    <Banner style={{ backgroundImage: `url(${food.capa})` }}>
+      <div className="container">
+        <Category>{food.tipo}</Category>
+        <Restaurant>{food.titulo}</Restaurant>
+      </div>
+    </Banner>
+  )
+}
 
 export default Hero

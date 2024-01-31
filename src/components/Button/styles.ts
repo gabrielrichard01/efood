@@ -10,14 +10,14 @@ export const ButtonContainer = styled.button<Props>`
   background-color: ${(props) =>
     props.variant === 'primary' ? cores.bege : cores.rosa};
   border: none;
-  padding: 4px 0;
+  padding: 4px 6px;
   margin-top: 7px;
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  width: 100%;
   display: block;
+  cursor: pointer;
 `
 
 export const ButtonLink = styled(Link)`
@@ -30,4 +30,5 @@ export const ButtonLink = styled(Link)`
   padding: 4px 6px;
   display: inline-block;
   margin-top: 16px;
+  cursor: pointer;
 `
