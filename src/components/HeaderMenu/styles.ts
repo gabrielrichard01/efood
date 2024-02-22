@@ -17,4 +17,13 @@ export const Links = styled.a`
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
+`
+
+export const CartButton = styled.a`
+  color: ${cores.rosa};
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 `

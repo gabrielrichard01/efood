@@ -5,17 +5,18 @@ import { Food } from '../Home'
 import Hero from '../../components/Hero'
 import HeaderMenu from '../../components/HeaderMenu'
 import Cardapio from '../../components/Cardapio'
+import {
+  useGetCardapioItemQuery,
+  useGetCardapioQuery,
+  useGetFeaturesFoodQuery,
+  useGetFoodQuery
+} from '../../services/api'
+import Cart from '../../components/Cart'
 
 const Product = () => {
   const { id } = useParams()
-
-  const [food, setFood] = useState<Food>()
-
-  useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
-      .then((res) => res.json())
-      .then((res) => setFood(res))
-  }, [id])
+  const { data: food } = useGetFoodQuery(id!)
+  const { data: item } = useGetFeaturesFoodQuery()
 
   if (!food) {
     return <h3>Carregando...</h3>
@@ -25,7 +26,8 @@ const Product = () => {
     <>
       <HeaderMenu />
       <Hero food={food} />
-      <Cardapio name={food.tipo} items={food.cardapio} />
+      <Cardapio foods={food} name={food.tipo} items={food.cardapio} />
+      <Cart />
     </>
   )
 }

@@ -4,62 +4,15 @@ import { Descricao, Item, Items, Modal, ModalContent, Titulo } from './styles'
 import Button from '../Button'
 import fechar from '../../assets/images/close.png'
 
-import { CardapioItem } from '../../pages/Home'
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
+import { Food } from '../../pages/Home'
+import { FoodCardapio, CardapioItem } from '../../types'
 
-const mock: CardapioItem[] = [
-  {
-    foto: '',
-    preco: 1,
-    id: 1,
-    nome: '',
-    descricao: '',
-    porcao: ''
-  },
-  {
-    foto: '',
-    preco: 1,
-    id: 1,
-    nome: '',
-    descricao: '',
-    porcao: ''
-  },
-  {
-    foto: '',
-    preco: 1,
-    id: 1,
-    nome: '',
-    descricao: '',
-    porcao: ''
-  },
-  {
-    foto: '',
-    preco: 1,
-    id: 1,
-    nome: '',
-    descricao: '',
-    porcao: ''
-  },
-  {
-    foto: '',
-    preco: 1,
-    id: 1,
-    nome: '',
-    descricao: '',
-    porcao: ''
-  },
-  {
-    foto: '',
-    preco: 1,
-    id: 1,
-    nome: '',
-    descricao: '',
-    porcao: ''
-  }
-]
-
-type Props = {
+export type Props = {
   name: string
   items: CardapioItem[]
+  foods: Food
 }
 
 interface ModalState extends CardapioItem {
@@ -73,7 +26,14 @@ const getDescricaoFood = (descricao: string) => {
   return descricao
 }
 
-const Cardapio = ({ name, items }: Props) => {
+const Cardapio = ({ name, items, foods }: Props) => {
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(foods))
+    dispatch(open())
+  }
+
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     foto: '',
@@ -83,10 +43,6 @@ const Cardapio = ({ name, items }: Props) => {
     porcao: '',
     preco: 10.88
   })
-
-  const getMediaCover = (item: CardapioItem) => {
-    if (item.foto) return item.foto
-  }
 
   const closeModal = () => {
     setModal({
@@ -106,10 +62,7 @@ const Cardapio = ({ name, items }: Props) => {
         <Items>
           {items.map((media, index) => (
             <Item key={media.id}>
-              <img
-                src={getMediaCover(media)}
-                alt={`Mídia ${index + 1} Nome ${name}`}
-              />
+              <img src={media.foto} alt={`Mídia ${index + 1} Nome ${name}`} />
               <Titulo>{media.nome}</Titulo>
               <Descricao>{getDescricaoFood(media.descricao)}</Descricao>
               <Button
@@ -148,6 +101,7 @@ const Cardapio = ({ name, items }: Props) => {
                 type="button"
                 title="Clique aqui para ter mais detalhes"
                 variant="primary"
+                onClick={addToCart}
               >
                 {`Adicionar ao carrinho - R$ ${modal.preco}0`}
               </Button>
