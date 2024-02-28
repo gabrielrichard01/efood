@@ -1,30 +1,39 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
+import { Link } from 'react-router-dom'
 
-export const Container = styled.footer`
-  background-color: ${cores.bege};
-  margin-top: 72px;
-  padding: 40px 0;
+export const Footer = styled.div`
+  background-color: ${cores.beige};
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-top: 80px;
+  }
 `
 
-export const FooterLogo = styled.div`
-  text-align: center;
-  margin-bottom: 32px;
+export const Logo = styled(Link)`
+  display: flex;
+  justify-content: center;
 `
 
-export const RedesSociais = styled.div`
-  text-align: center;
-  margin-bottom: 80px;
+export const Icons = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  cursor: pointer;
 
   img {
-    margin-left: 8px;
+    margin-right: 8px;
   }
 `
 
 export const Descricao = styled.p`
-  color: ${cores.rosa};
+  max-width: 480px;
   text-align: center;
   font-size: 10px;
-  max-width: 480px;
-  margin: 0 auto;
+  color: ${cores.pink};
+  margin-top: 80px;
 `

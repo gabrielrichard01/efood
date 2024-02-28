@@ -1,32 +1,28 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { CardapioItem, Foods } from '../types'
-import { Food } from '../pages/Home'
+import { Restaurantes } from '../pages/Home'
+import { CardapioItem } from '../components/MenuList'
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://fake-api-tau.vercel.app/api/efood'
   }),
   endpoints: (builder) => ({
-    getFeaturesFood: builder.query<Food[], void>({
+    getRestaurantes: builder.query<Restaurantes[], void>({
       query: () => 'restaurantes'
     }),
-    getCardapioItem: builder.query<CardapioItem, void>({
-      query: () => 'restaurantes'
+    getCardapio: builder.query<CardapioItem[], string>({
+      query: (id) => `restaurantes/${id}`,
+      transformResponse: (response: any) => response.cardapio
     }),
-    getCardapio: builder.query<Foods[], void>({
-      query: () => 'restaurantes'
-    }),
-    getFood: builder.query<Food, string>({
+    getBanner: builder.query<Restaurantes, string>({
       query: (id) => `restaurantes/${id}`
     })
   })
 })
 
 export const {
-  useGetFeaturesFoodQuery,
-  useGetFoodQuery,
-  useGetCardapioItemQuery,
-  useGetCardapioQuery
+  useGetRestaurantesQuery,
+  useGetCardapioQuery,
+  useGetBannerQuery
 } = api
-
 export default api

@@ -1,45 +1,62 @@
-import Button from '../Button'
-import { CartContainer, CartItem, Overlay, Prices, Sidebar } from './styles'
-
-import pizza from '../../assets/images/logo.png'
-import { RootReducer } from '../../store'
 import { useDispatch, useSelector } from 'react-redux'
-import { close } from '../../store/reducers/cart'
+import * as S from './styles'
+import { FaRegTrashAlt } from 'react-icons/fa'
+import { RootReducer } from '../../store/'
+import { close, remove } from '../../store/reducers/cart'
+import { conversaoReal } from '../MenuList'
+import Button from '../Button'
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
-
   const dispatch = useDispatch()
 
   const closeCart = () => {
     dispatch(close())
   }
 
+  const getTotalPrice = () => {
+    return items.reduce((acumulador, valorAtual) => {
+      return (acumulador += valorAtual.preco!)
+    }, 0)
+  }
+
+  const removeItem = (id: number) => {
+    dispatch(remove(id))
+  }
+
   return (
-    <CartContainer className={isOpen ? 'is-open' : ''}>
-      <Overlay onClick={closeCart} />
-      <Sidebar>
-        <ul>
-          {items.map((item) => (
-            <CartItem key={item.cardapio.id}>
-              <img src={item.cardapio.foto} />
-              <div>
-                <h3>{item.cardapio.nome}</h3>
-                <span>{item.cardapio.preco}</span>
-              </div>
-              <button type="button" />
-            </CartItem>
-          ))}
-        </ul>
-        <Prices>
-          <p>Valor Total</p>
-          <p>R$ 182,70</p>
-        </Prices>
-        <Button title="Clique aqui para continuar com a entrega" type="button">
-          Continuar com a entrega
-        </Button>
-      </Sidebar>
-    </CartContainer>
+    <>
+      <S.CartContainer className={isOpen ? 'is-open' : ''}>
+        <S.Overlay onClick={closeCart} />
+        <S.SideBar>
+          <ul>
+            {items.map((item) => (
+              <S.CartItem key={item.id}>
+                <img src={item.foto} alt="" />
+                <div>
+                  <h4>{item.nome}</h4>
+                  <span>{conversaoReal(item.preco)}</span>
+                </div>
+                <button onClick={() => removeItem(item.id)} type="button">
+                  <FaRegTrashAlt />
+                </button>
+              </S.CartItem>
+            ))}
+          </ul>
+          <S.ValorTotal>
+            <p>Valor total :</p>
+            <span>{conversaoReal(getTotalPrice())}</span>
+          </S.ValorTotal>
+          <Button
+            type="button"
+            title="clique aqui para continuar com a entrega"
+            variant="primary"
+          >
+            Continuar com a entrega
+          </Button>
+        </S.SideBar>
+      </S.CartContainer>
+    </>
   )
 }
 

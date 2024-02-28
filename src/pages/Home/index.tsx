@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react'
-
-import ProductList from '../../components/ProductList'
+import ListaRestaurantes from '../../components/RestaurantList'
 import Header from '../../components/Header'
-import { useGetFeaturesFoodQuery } from '../../services/api'
 
-export type Food = {
+import { useGetRestaurantesQuery } from '../../services/api'
+
+export type Restaurantes = {
   id: number
   titulo: string
   destacado: boolean
@@ -12,29 +11,36 @@ export type Food = {
   avaliacao: number
   descricao: string
   capa: string
-  cardapio: {
-    foto: string
-    preco: number
-    id: number
-    nome: string
-    descricao: string
-    porcao: string
-  }
+  cardapio: [
+    {
+      foto: string
+      preco: number
+      id: number
+      nome: string
+      descricao: string
+      porcao: string
+    }
+  ]
 }
 
 const Home = () => {
-  const { data: food } = useGetFeaturesFoodQuery()
+  const { data: restaurante } = useGetRestaurantesQuery()
 
-  if (food) {
+  if (restaurante) {
     return (
       <>
         <Header />
-        <ProductList foods={food} />
+        <div className="container">
+          <ListaRestaurantes restaurantes={restaurante} />
+        </div>
       </>
     )
   }
-
-  return <h4>Carregando...</h4>
+  return (
+    <>
+      <h1>Carregando...</h1>
+    </>
+  )
 }
 
 export default Home

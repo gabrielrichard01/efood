@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
-import lixeira from '../../assets/images/lixeira.png'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -15,8 +14,8 @@ export const Overlay = styled.div`
 
 export const CartContainer = styled.div`
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   display: none;
@@ -26,65 +25,58 @@ export const CartContainer = styled.div`
   &.is-open {
     display: flex;
   }
-`
-
-export const Sidebar = styled.aside`
-  background-color: ${cores.rosa};
-  z-index: 1;
-  padding: 30px 10px 0 10px;
-  max-width: 360px;
-  width: 100%;
 
   ${ButtonContainer} {
-    max-width: 100%;
     width: 100%;
-    margin-top: 20px;
   }
 `
+export const SideBar = styled.aside`
+  background-color: ${cores.pink};
+  max-width: 360px;
+  width: 100%;
+  padding: 32px 8px 0px 8px;
+  z-index: 1;
 
-export const Prices = styled.div`
-  font-weight: bold;
-  font-size: 14px;
-  color: ${cores.bege};
-  display: flex;
-  justify-content: space-between;
-  padding-top: 24px;
+  @media (max-width: ${breakpoints.phone}) {
+    max-width: 280px;
+  }
 `
-
 export const CartItem = styled.li`
+  background-color: ${cores.beige};
+  color: ${cores.pink};
   display: flex;
-  background-color: ${cores.bege};
-  padding: 10px;
-  width: 344px;
+  padding: 8px;
   margin-bottom: 16px;
   position: relative;
 
   img {
     height: 80px;
     width: 80px;
+    margin-right: 8px;
     object-fit: cover;
-    padding-right: 10px;
-    padding-bottom: 4px;
   }
 
-  h3 {
-    color: ${cores.rosa};
-    padding-bottom: 25px;
-    font-size: 14px;
-  }
-
-  span {
-    color: ${cores.rosa};
-    font-size: 14px;
+  h4 {
+    font-weight: 900;
+    padding-bottom: 16px;
   }
 
   button {
-    background-image: url(${lixeira});
-    width: 16px;
-    height: 16px;
+    background-color: transparent;
+    border: none;
     position: absolute;
     bottom: 8px;
     right: 8px;
-    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: ${cores.pink};
   }
+`
+
+export const ValorTotal = styled.div`
+  display: flex;
+  justify-content: space-between;
+  color: ${cores.beige};
+  font-weight: bold;
+  margin-top: 40px;
 `
