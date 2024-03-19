@@ -3,22 +3,13 @@ import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
 import Cardapio from '../Menu'
-import { Listagem, Modal, ModalContent } from './styles'
+import * as S from './styles'
 import close from '../../assets/images/close.png'
 import { add, open } from '../../store/reducers/cart'
 import { useGetCardapioQuery } from '../../services/api'
+import Loader from '../Loader'
 
-export type CardapioItem = {
-  id: number
-  foto: string
-  titulo: string
-  descricao: string
-  preco: number
-  porcao: string
-  nome: string
-}
-
-export const conversaoReal = (preco = 0) => {
+export const parseToBrl = (preco = 0) => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL'
@@ -30,9 +21,9 @@ const MenuList = () => {
   const { data: cardapio } = useGetCardapioQuery(id!)
 
   const [modalAberta, setModalAberta] = useState(false)
-  const [itemCardapio, setItemCardapio] = useState<CardapioItem>()
+  const [itemCardapio, setItemCardapio] = useState<MenuItem>()
 
-  function abrirModal(item: CardapioItem) {
+  function abrirModal(item: MenuItem) {
     setModalAberta(true)
     setItemCardapio(item)
   }
@@ -42,20 +33,21 @@ const MenuList = () => {
     if (itemCardapio) {
       dispatch(add(itemCardapio))
       dispatch(open())
+      setModalAberta(false)
     }
   }
 
   if (!cardapio) {
     return (
       <>
-        <h4>Carregando...</h4>
+        <Loader />
       </>
     )
   }
 
   return (
     <>
-      <Listagem className="container">
+      <S.List className="container">
         {cardapio.map((item) => (
           <li key={item.id} onClick={() => abrirModal(item)}>
             <Cardapio
@@ -65,10 +57,10 @@ const MenuList = () => {
             />
           </li>
         ))}
-      </Listagem>
-      <Modal className={modalAberta ? 'visivel' : ''}>
+      </S.List>
+      <S.Modal className={modalAberta ? 'visivel' : ''}>
         <div className="container">
-          <ModalContent>
+          <S.ModalContent>
             <header>
               <img
                 src={close}
@@ -86,14 +78,14 @@ const MenuList = () => {
                 </p>
                 <button onClick={addToCart}>
                   Adicionar ao carrinho
-                  <span> {conversaoReal(itemCardapio?.preco)}</span>
+                  <span> {parseToBrl(itemCardapio?.preco)}</span>
                 </button>
               </div>
             </div>
-          </ModalContent>
+          </S.ModalContent>
         </div>
         <div className="overlay" onClick={() => setModalAberta(false)}></div>
-      </Modal>
+      </S.Modal>
     </>
   )
 }

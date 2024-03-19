@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colores } from '../../styles'
 import { Link } from 'react-router-dom'
 
 export const Footer = styled.div`
-  background-color: ${cores.beige};
+  background-color: ${colores.beige};
   margin-top: 120px;
   display: flex;
   justify-content: center;
@@ -34,6 +34,6 @@ export const Descricao = styled.p`
   max-width: 480px;
   text-align: center;
   font-size: 10px;
-  color: ${cores.pink};
+  color: ${colores.pink};
   margin-top: 80px;
 `

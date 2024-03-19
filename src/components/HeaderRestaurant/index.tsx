@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { open } from '../../store/reducers/cart'
 import { useGetBannerQuery } from '../../services/api'
 import { RootReducer } from '../../store'
+import Loader from '../Loader'
 
 const HeaderRestaurant = () => {
   const { id } = useParams()
@@ -20,7 +21,7 @@ const HeaderRestaurant = () => {
   const { data: bannerRestaurante } = useGetBannerQuery(id!)
 
   if (!bannerRestaurante) {
-    return <h1>Carregando...</h1>
+    return <Loader />
   }
 
   return (
@@ -28,25 +29,25 @@ const HeaderRestaurant = () => {
       <BannerImg style={{ backgroundImage: `url(${background})` }}>
         <S.HeaderContent>
           <S.Restaurant to={'/'}>Restaurantes</S.Restaurant>
-          <S.LogoRestaurante to={'/'}>
+          <S.LogoRestaurant to={'/'}>
             <img src={Logo} alt="logo efood" />
-          </S.LogoRestaurante>
-          <S.Carrinho onClick={addToCart}>
+          </S.LogoRestaurant>
+          <S.Cart onClick={addToCart}>
             {items.length} produto(s) no carrinho
-          </S.Carrinho>
+          </S.Cart>
         </S.HeaderContent>
       </BannerImg>
 
-      <S.BannerRestaurante
+      <S.BannerRestaurant
         style={{ backgroundImage: `url(${bannerRestaurante?.capa})` }}
       >
         <div className="container">
-          <S.TagTipo>{bannerRestaurante.tipo}</S.TagTipo>
-          <S.TituloRestaurante>
+          <S.TagType>{bannerRestaurante.tipo}</S.TagType>
+          <S.RestaurantTitle>
             <h1>{bannerRestaurante.titulo}</h1>
-          </S.TituloRestaurante>
+          </S.RestaurantTitle>
         </div>
-      </S.BannerRestaurante>
+      </S.BannerRestaurant>
     </>
   )
 }

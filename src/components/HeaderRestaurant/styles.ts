@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { LogoEfood } from '../Header/styles'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colores } from '../../styles'
 import { Link } from 'react-router-dom'
 
 export const HeaderContent = styled.div`
@@ -17,7 +17,7 @@ export const HeaderContent = styled.div`
   }
 `
 
-export const LogoRestaurante = styled(LogoEfood)`
+export const LogoRestaurant = styled(LogoEfood)`
   @media (max-width: ${breakpoints.tablet}) {
     padding: 20px 0;
   }
@@ -29,22 +29,22 @@ export const ListaRestaurantes = styled.div`
 
   h3 {
     font-size: 18px;
-    color: ${cores.pink};
+    color: ${colores.pink};
   }
 `
 
 export const Restaurant = styled(Link)`
-  color: ${cores.pink};
+  color: ${colores.pink};
   font-size: 18px;
   font-weight: 900;
   text-decoration: none;
   line-height: 22px;
 `
 
-export const Carrinho = styled.div`
+export const Cart = styled.div`
   display: flex;
   justify-content: center;
-  color: ${cores.pink};
+  color: ${colores.pink};
   font-size: 18px;
   font-weight: 900;
   text-decoration: none;
@@ -52,7 +52,7 @@ export const Carrinho = styled.div`
   cursor: pointer;
 `
 
-export const BannerRestaurante = styled.div`
+export const BannerRestaurant = styled.div`
   height: 280px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -74,8 +74,8 @@ export const BannerRestaurante = styled.div`
     position: relative;
   }
 `
-export const TituloRestaurante = styled.div`
-  color: ${cores.white};
+export const RestaurantTitle = styled.div`
+  color: ${colores.white};
   padding-top: 216px;
   padding-bottom: 32px;
 
@@ -88,13 +88,13 @@ export const TituloRestaurante = styled.div`
   }
 `
 
-export const TagTipo = styled.span`
+export const TagType = styled.span`
   position: absolute;
   top: 24px;
   left: 0;
   font-size: 32px;
   font-weight: 100;
-  color: ${cores.white};
+  color: ${colores.white};
 
   @media (max-width: ${breakpoints.phone}) {
     font-size: 24px;

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colores } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 export const CardCardapio = styled.div`
-  background-color: ${cores.pink};
+  background-color: ${colores.pink};
   padding: 8px;
-  color: ${cores.beige};
+  color: ${colores.beige};
   border-radius: 8px;
   width: 320px;
   height: 338px;

@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colores } from '../../styles'
 import { TagRestaurante } from '../Tag/styles'
 import { ButtonLink } from '../Button/styles'
 
 export const Card = styled.div`
-  background-color: ${cores.white};
+  background-color: ${colores.white};
   position: relative;
   width: 472px;
-  border: 1px solid ${cores.pink};
+  border: 1px solid ${colores.pink};
 
   > img {
     object-fit: cover;
@@ -39,7 +39,7 @@ export const Infos = styled.div`
 export const Title = styled.div`
   display: flex;
   justify-content: space-between;
-  color: ${cores.pink};
+  color: ${colores.pink};
   font-weight: bold;
 
   h3 {
@@ -63,7 +63,7 @@ export const Types = styled.div`
 `
 
 export const Descricao = styled.p`
-  color: ${cores.pink};
+  color: ${colores.pink};
   line-height: 22px;
   margin-top: 12px;
   font-size: 14px;

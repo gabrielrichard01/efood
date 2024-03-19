@@ -18,7 +18,7 @@ const Menu = ({ image, name, description }: Props) => {
   return (
     <>
       <CardCardapio>
-        <img src={image} alt="" />
+        <img src={image} />
         <h3>{name}</h3>
         <p>{getDescricao(description)}</p>
         <Button

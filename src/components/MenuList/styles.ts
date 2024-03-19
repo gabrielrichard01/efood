@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colores } from '../../styles'
 
-export const Listagem = styled.ul`
+export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px;
@@ -57,7 +57,7 @@ export const Modal = styled.div`
 `
 
 export const ModalContent = styled.div`
-  background-color: ${cores.pink};
+  background-color: ${colores.pink};
   position: relative;
   z-index: 1;
 
@@ -109,8 +109,8 @@ export const ModalContent = styled.div`
         text-align: center;
         padding: 4px 8px;
         border: none;
-        color: ${cores.pink};
-        background-color: ${cores.beige};
+        color: ${colores.pink};
+        background-color: ${colores.beige};
         cursor: pointer;
       }
     }

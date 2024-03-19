@@ -1,6 +1,38 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { Restaurantes } from '../pages/Home'
-import { CardapioItem } from '../components/MenuList'
+
+type Product = {
+  id: number
+  price: number
+}
+
+type PurchasePayload = {
+  products: Product[]
+  delivery: {
+    receiver: string
+    address: {
+      description: string
+      city: string
+      zipCode: string
+      number: number
+      complement: string
+    }
+  }
+  payment: {
+    card: {
+      name: string
+      number: string
+      code: number
+      expires: {
+        month: number
+        year: number
+      }
+    }
+  }
+}
+
+type PurchaseResponse = {
+  orderId: string
+}
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
@@ -10,12 +42,19 @@ const api = createApi({
     getRestaurantes: builder.query<Restaurantes[], void>({
       query: () => 'restaurantes'
     }),
-    getCardapio: builder.query<CardapioItem[], string>({
+    getCardapio: builder.query<MenuItem[], string>({
       query: (id) => `restaurantes/${id}`,
       transformResponse: (response: any) => response.cardapio
     }),
     getBanner: builder.query<Restaurantes, string>({
       query: (id) => `restaurantes/${id}`
+    }),
+    purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
+      query: (body) => ({
+        url: 'checkout',
+        method: 'POST',
+        body: body
+      })
     })
   })
 })
@@ -23,6 +62,7 @@ const api = createApi({
 export const {
   useGetRestaurantesQuery,
   useGetCardapioQuery,
-  useGetBannerQuery
+  useGetBannerQuery,
+  usePurchaseMutation
 } = api
 export default api

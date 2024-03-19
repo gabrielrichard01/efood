@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colores } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 export const Overlay = styled.div`
@@ -31,7 +31,7 @@ export const CartContainer = styled.div`
   }
 `
 export const SideBar = styled.aside`
-  background-color: ${cores.pink};
+  background-color: ${colores.pink};
   max-width: 360px;
   width: 100%;
   padding: 32px 8px 0px 8px;
@@ -42,8 +42,8 @@ export const SideBar = styled.aside`
   }
 `
 export const CartItem = styled.li`
-  background-color: ${cores.beige};
-  color: ${cores.pink};
+  background-color: ${colores.beige};
+  color: ${colores.pink};
   display: flex;
   padding: 8px;
   margin-bottom: 16px;
@@ -69,14 +69,36 @@ export const CartItem = styled.li`
     right: 8px;
     font-size: 16px;
     cursor: pointer;
-    color: ${cores.pink};
+    color: ${colores.pink};
   }
 `
 
 export const ValorTotal = styled.div`
   display: flex;
   justify-content: space-between;
-  color: ${cores.beige};
+  color: ${colores.beige};
   font-weight: bold;
   margin-top: 40px;
+`
+
+export const Button = styled.button`
+  width: 100%;
+  margin-top: 20px;
+  padding: 4px 0;
+  border: none;
+  font-weight: bold;
+  background-color: ${colores.beige};
+  color: ${colores.pink};
+  cursor: pointer;
+`
+export const CartButtons = styled.div`
+  padding-bottom: 24px;
+
+  .display-button {
+    display: none;
+
+    @media (max-width: ${breakpoints.phone}) {
+      display: block;
+    }
+  }
 `
