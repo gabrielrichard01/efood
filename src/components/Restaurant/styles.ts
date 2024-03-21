@@ -6,7 +6,7 @@ import { ButtonLink } from '../Button/styles'
 export const Card = styled.div`
   background-color: ${colores.white};
   position: relative;
-  width: 472px;
+  width: 100%;
   border: 1px solid ${colores.pink};
 
   > img {
@@ -25,10 +25,6 @@ export const Card = styled.div`
 
   @media (max-width: ${breakpoints.tablet}) {
     margin: 0 auto;
-  }
-
-  @media (max-width: ${breakpoints.phone}) {
-    width: 300px;
   }
 `
 
